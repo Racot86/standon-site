@@ -1,0 +1,22 @@
+:root { --page: #DFD6C6; --sheet: #F1E9DC; --ink: #112330; --muted: #435159; --brass: #714619; --line: #D3C5AE; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root { --page: #070F16; --sheet: #11283A; --ink: #F2EFE8; --muted: #9AAEBA; --brass: #F2BC7E; --line: #284257; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+header, main, footer { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-top: 28px; }
+.brand { font-weight: 600; font-size: 19px; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--brass); }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 15px; }
+nav a:first-child { margin-left: 0; }
+nav a[aria-current] { color: var(--ink); font-weight: 600; }
+main { margin-top: 28px; padding: 32px 28px; background: var(--sheet); border-radius: 22px; border-top: 1px solid rgba(255,255,255,.08);
+       box-shadow: 0 1px 1px rgba(0,0,0,.18), 0 8px 24px rgba(0,0,0,.12); }
+.eyebrow { color: var(--brass); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 6px; }
+h1 { font-size: 32px; line-height: 1.2; font-weight: 700; margin: 0 0 16px; }
+h2 { font-size: 19px; margin: 32px 0 6px; }
+p { margin: 0 0 14px; }
+.muted { color: var(--muted); font-size: 15px; }
+a { color: var(--brass); }
+footer { padding: 24px 24px 48px; color: var(--muted); font-size: 14px; }
+footer a { color: var(--muted); margin-right: 14px; }
+@media (max-width: 600px) { main { margin: 20px 12px 0; padding: 24px 18px; } header { padding: 20px 16px 0; } h1 { font-size: 27px; } }
